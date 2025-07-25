@@ -32,7 +32,7 @@ def has_command_role(interaction: discord.Interaction, command_name: str) -> boo
     return any(role.id == required_role_id for role in interaction.user.roles)
 
 RULES = {
-    "ru": {
+    "uk": {
         "title": "📜 Официальные правила сервера RankPush",
         "description": (
             "Добро пожаловать на RankPush! Перед началом игры обязательно ознакомьтесь с правилами. "
