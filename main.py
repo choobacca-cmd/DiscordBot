@@ -12,7 +12,6 @@ intents.members = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 AUTO_ROLE_ID = 1396072475053265008
-WELCOME_CHANNEL_ID = 1396082261245296700
 
 @bot.event
 async def on_member_join(member):
@@ -20,14 +19,6 @@ async def on_member_join(member):
     if role:
         try:
             await member.add_roles(role)
-            channel = bot.get_channel(WELCOME_CHANNEL_ID)
-            if channel:
-                embed = discord.Embed(
-                    title=f"Ласкаво просимо, {member.name}!",
-                    description=f"Вам видано роль {role.mention}",
-                    color=discord.Color.green()
-                )
-                await channel.send(embed=embed)
         except Exception as e:
             print(f"Помилка: {e}")
 
