@@ -11,6 +11,7 @@ intents.message_content = True
 intents.members = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
+AUTO_ROLE_ID = 1396072475053265008
 WELCOME_CHANNEL_ID = 1396082261245296700
 
 @bot.event
